@@ -1,0 +1,29 @@
+// Write a function kebabToSnake() which takes a single kebab-cased string argument and returns the snake_cased version.
+// basically, replace "-"s with "_"s.
+// KebabToSnake Example;
+
+
+function kebabToSnake(str) {
+    //replace all dashes "-" with underscore "_"
+    var myString = str.replace(/-/g, "_");
+    //return str
+    return myString;
+    //try with: "this - is -a - ---test";
+}
+kebabToSnake("Hello-World!");// "Hello_World!"
+kebabToSnake("my-friend-is-good!")// "my_friend_is_good!"
+kebabToSnake("Goodbye-America!")// "Goodbye_America!"
+
+
+// Another example;
+
+// camelCaseToDash('userId') => "user-id"
+// camelCaseToDash('waitAMoment') => "wait-a-moment"
+// camelCaseToDash('TurboPascal') => "turbo-pascal"
+
+function camelCaseToDash (str) {
+  return str.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase()
+}
+camelCaseToDash("Hello-World!");//"hello-world!"
+
+
